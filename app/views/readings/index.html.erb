@@ -1,0 +1,18 @@
+<h1>Blood Glucose Level History for <%= @username %></h1>
+
+<br/>
+
+<%= link_to 'Enter glucose reading', new_reading_path, class: 'btn btn-success' %>
+<br/><br/>
+
+<table class='data-table'>
+  <thead>
+    <tr>
+      <th>Glucose Level (mg/dL)</th>
+      <th>Date Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @readings %>
+  </tbody>
+</table>

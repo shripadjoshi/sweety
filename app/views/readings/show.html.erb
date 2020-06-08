@@ -1,0 +1,12 @@
+<h4>
+  <strong>Blood Glucose Level Reading:</strong>
+  <%= @reading.glucose_level %> (mg/dL)
+</h4>
+<h4>Date recorded:
+  <%= @reading.created_at.strftime("%A, %B %d, %Y") %>
+</h4>
+<br/>
+<p>
+  <%= link_to 'Enter new blood glucose reading', new_reading_path, class: 'btn btn-success' %>
+  <%= link_to 'View History', readings_path, class: 'btn btn-primary'  %>
+</p>
